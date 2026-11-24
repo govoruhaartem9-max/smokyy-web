@@ -99,7 +99,7 @@
       const submitButton=inquiryForm.querySelector('button[type="submit"]');
       const telegram=String(data.get('telegram')||'').trim();
       const projectDetails=String(data.get('details')||'').trim();
-      const payload={name:String(data.get('name')||'').trim(),type:inquiryForm.elements.type.selectedOptions[0].textContent.trim(),details:telegram ? projectDetails + '\nTelegram: ' + telegram : projectDetails,timeline:String(data.get('timeline')||'').trim(),language,website:String(data.get('website')||'')};
+      const payload={site:'smokyy-web',name:String(data.get('name')||'').trim(),type:inquiryForm.elements.type.selectedOptions[0].textContent.trim(),details:telegram ? projectDetails + '\nTelegram: ' + telegram : projectDetails,timeline:String(data.get('timeline')||'').trim(),language,website:String(data.get('website')||'')};
       if(formEndpoint){
         submitButton.disabled=true;
         status.textContent=isEnglish?'Sending your request…':'Надсилаю заявку…';
