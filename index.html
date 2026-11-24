@@ -97,7 +97,7 @@
       const isEnglish=language==='en';
       const status=document.getElementById('form-status');
       const submitButton=inquiryForm.querySelector('button[type="submit"]');
-      const payload={name:String(data.get('name')||'').trim(),type:inquiryForm.elements.type.selectedOptions[0].textContent.trim(),details:String(data.get('details')||'').trim(),timeline:String(data.get('timeline')||'').trim(),language,website:String(data.get('website')||'')};
+      const payload={site:'smokyy-web',name:String(data.get('name')||'').trim(),type:inquiryForm.elements.type.selectedOptions[0].textContent.trim(),details:String(data.get('details')||'').trim(),timeline:String(data.get('timeline')||'').trim(),language,website:String(data.get('website')||'')};
       if(formEndpoint){
         submitButton.disabled=true;
         status.textContent=isEnglish?'Sending your request…':'Надсилаю заявку…';
